@@ -60,6 +60,10 @@ We chose HTS to create 4 NFT collections that serve as **immutable records of su
 - `TokenMintTransaction` - Issuing NFTs to the collections with metadata URIs
 - `TokenTransferTransaction` - Transferring NFTs to recipients
 
+**Key Function (`certification.webapp/src/lib/hedera.ts`):**
+```ts
+mintNFT(metadata: { name: string; image: string }, tokenIdString: string)
+
 **Economic Justification:**  
 HTS's predictable, low fees (~$0.001 per mint) make it economically viable to issue large volumes of NFTs in African markets where transaction costs directly impact adoption. The built-in royalty capabilities and standardized metadata format ensure sustainability without expensive smart contract maintenance. This is critical for our business model targeting **green hydrogen and Power-to-X developers in Africa**.
 
