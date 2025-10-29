@@ -63,6 +63,7 @@ We chose HTS to create 4 NFT collections that serve as **immutable records of su
 **Key Function (`certification.webapp/src/lib/hedera.ts`):**
 ```ts
 mintNFT(metadata: { name: string; image: string }, tokenIdString: string)
+```
 
 **Economic Justification:**  
 HTS's predictable, low fees (~$0.001 per mint) make it economically viable to issue large volumes of NFTs in African markets where transaction costs directly impact adoption. The built-in royalty capabilities and standardized metadata format ensure sustainability without expensive smart contract maintenance. This is critical for our business model targeting **green hydrogen and Power-to-X developers in Africa**.
@@ -76,6 +77,8 @@ We created dedicated HCS topic to log all NFT issuance and plausibility check ev
 **Transaction Types:**  
 - `TopicCreateTransaction` - Setting up HCS topic for event logging
 - `TopicMessageSubmitTransaction` - Recording issuance events: who issued an NFT, when, which collection, and associated metadata
+
+HCS Event Payload (logged on mint):
 
 **Economic Justification:**  
 HCS's $0.0001 per message fee ensures we can log comprehensive audit trails without incurring prohibitive costs. This is especially valuable in Africa where operational cost predictability is essential for business sustainability. Every transaction is immutably recorded and timestamped by Hedera's Byzantine Fault Tolerant consensus.
