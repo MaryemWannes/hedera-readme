@@ -78,7 +78,17 @@ We created dedicated HCS topic to log all NFT issuance and plausibility check ev
 - `TopicCreateTransaction` - Setting up HCS topic for event logging
 - `TopicMessageSubmitTransaction` - Recording issuance events: who issued an NFT, when, which collection, and associated metadata
 
-HCS Event Payload (logged on mint):
+**HCS Event Payload (logged on mint):**
+```json 
+{
+  "event": "NFT_MINTED",
+  "documentType": "invoice",
+  "collection": "0.0.7108304",
+  "serial": "1",
+  "ipfs": "ipfs://bafy...",
+  "timestamp": "2025-10-29T12:00:00Z"
+}
+```
 
 **Economic Justification:**  
 HCS's $0.0001 per message fee ensures we can log comprehensive audit trails without incurring prohibitive costs. This is especially valuable in Africa where operational cost predictability is essential for business sustainability. Every transaction is immutably recorded and timestamped by Hedera's Byzantine Fault Tolerant consensus.
@@ -93,10 +103,15 @@ We use IPFS to decentralized store actual files (documents, images, certificates
 - **Verifiability:** The immutable hash proves file integrity and authenticity
 
 **Implementation:**  
-- Upload files to IPFS using [describe method: e.g., "Pinata API, Nft.storage, or local IPFS node"]
+- Upload files to IPFS using `uploadToPinata(buffer, filename)`
 - Receive IPFS CID (content hash)
-- Embed CID in NFT metadata URI
+- Embed `ipfs://<CID>` in NFT metadata URI
 - Store reference in Hedera NFT
+
+**Key Function (`certification.webapp/src/lib/ipfs.ts`):**
+```ts
+uploadToPinata(data: ArrayBuffer | Uint8Array, filename: string): Promise<string>
+```
 
 **Economic Justification:**  
 By separating file storage from blockchain transactions, we reduce on-chain costs while maintaining cryptographic proof of file authenticity. IPFS ensures files remain accessible without reliance on centralized servers vulnerable to censorship or downtime—critical for African markets with infrastructure challenges.
@@ -113,6 +128,12 @@ We query Hedera Mirror Node Explorer to retrieve complete transaction histories,
   - HCS topic message retrieval (all issuance events)
   - Account activity and balance verification
 
+**Mirror Node Queries Used:**
+
+- `GET /tokens/{tokenId}/nfts` → All minted NFTs
+- `GET /topics/{topicId}/messages` → HCS event log
+- `GET /accounts/{id}/tokens` → Operator balance  
+
 **Economic Justification:**  
 Mirror Node queries are free and publicly accessible, enabling cost-free verification and transparency. Users in Africa can instantly prove authenticity and ownership without intermediaries, reducing friction and building trust in the ecosystem.
 
@@ -125,12 +146,16 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
 
 | Component | ID | Purpose |
 |-----------|----|---------| 
-| NFT Collection 1 | `0.0.xxxxx` | [Describe - e.g., "Educational Credentials"] |
-| NFT Collection 2 | `0.0.xxxxx` | [Describe - e.g., "Supply Chain Records"] |
-| NFT Collection 3 | `0.0.xxxxx` | [Describe - e.g., "Professional Certifications"] |
-| NFT Collection 4 | `0.0.xxxxx` | [Describe - e.g., "Medical Records"] |
-| HCS Topic 1 | `0.0.xxxxx` | Main issuance event logging |
-| Operator Account ID | `0.0.xxxxx` | Main transaction signer |
+| GEX-POS | `0.0.7108305` | Proof of Sustainability |
+| GEX-INV | `0.0.7108304` | Invoices |
+| GEX-PPA | `0.0.7108301` | Power Purchase Agreements |
+| TERM-NFT | `0.0.7131752` | Term Sheets |
+| HCS Topic  | `0.0.7108913` | All issuance & plausibility events|
+| Testnet Account ID | `0.0.7081162` | Main transaction signer |
+
+> Live Verification Links:
+> - [HashScan POS](https://hashscan.io/testnet/token/0.0.7108305)
+> - [HashScan HCS Topic](https://hashscan.io/testnet/topic/0.0.7108913)
 
 ---
 
