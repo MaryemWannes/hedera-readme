@@ -220,13 +220,14 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
 ```bash
 npm start
 ```
-The React frontend will launch on `http://localhost:3000`
+The Nextjs frontend will launch on `http://localhost:3000`
 
 **Backend:**
 ```bash
-node server.js
+ocr and plausibility chechk services : pull docker images
+
 ```
-The backend will start on `http://localhost:5000`
+The backend will start on `http://localhost:8000`and  `http://localhost:8001"
 
 **Expected Running State:**
 - Frontend accessible at `http://localhost:3000` with upload and NFT creation interfaces
