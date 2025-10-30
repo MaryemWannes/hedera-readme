@@ -12,11 +12,11 @@ Built on **Hedera** (HTS + HCS) with **IPFS**, **AI OCR**, **Python micro-servic
 ### Solution Summary
 **GreenEarthX** is a **full-stack certification dApp** that lets plant operators:
 
-1. **Upload** 4 core documents (Proof-of-Sustainability, Invoice, PPA, Term-Sheet)  
+1. **Upload** documents (Proof-of-Sustainability, Invoice, PPA, Term-Sheet)  
 2. **Run AI OCR + Plausibility Check** (Python micro-services)  
 3. **Mint immutable NFTs** (Hedera HTS) with IPFS-backed proofs  
 4. **Log every step on HCS** for an **audit trail**  
-5. **View all plants on a global geomap** with **" Profile History "** that pulls live Mirror-Node for plausibility check results.  
+5. **View all plants on a global geomap** with **" Profile History "** that pulls live **Mirror-Node** for plausibility check results.  
 
 All verification is **on-chain, cost-effective, and instantly shareable**.
 
