@@ -321,37 +321,6 @@ npm run lint:fix
 
 ## Project Files & Structure
 
-```
-your-repo/
-├── README.md (this file)
-├── .env.example
-├── package.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├─ FileUpload.jsx
-│   │   │   ├─ NFTMinter.jsx
-│   │   │   └─ TransactionHistory.jsx
-│   │   ├── pages/
-│   │   └── utils/
-│   └── public/
-├── backend/
-│   ├── src/
-│   │   ├── routes/
-│   │   │   ├─ nft.routes.js
-│   │   │   ├─ ipfs.routes.js
-│   │   │   └─ history.routes.js
-│   │   ├── services/
-│   │   │   ├─ hedera.service.js
-│   │   │   ├─ ipfs.service.js
-│   │   │   └─ mirrornode.service.js
-│   │   └── controllers/
-│   └── server.js
-└── docs/
-    ├── IPFS_INTEGRATION.md
-    ├── HTS_NFT_SETUP.md
-    └── HCS_TOPIC_SETUP.md
-```
 
 ---
 
