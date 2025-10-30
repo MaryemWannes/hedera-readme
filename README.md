@@ -9,17 +9,6 @@ Built on **Hedera** (HTS + HCS) with **IPFS**, **AI OCR**, **Python micro-servic
 **Team Name:** [Team Name]  
 **Submission Date:** October 2025
 
-### Problem Statement
-Africa holds **>40 % of global renewable-energy potential** yet only **2 % of green-hydrogen projects** reach financial close.  
-**Key blockers (quantified):**
-
-| Metric | Source |
-|--------|--------|
-| **$70 B/yr** fossil-fuel subsidies distort green economics | IEA 2024 |
-| **80 %** of developers cite *lack of trust* as #1 barrier to PPAs | Africa Green Hydrogen Alliance |
-| **12-18 month** delays for RED-III compliance verification | BloombergNEF |
-| **No interoperable, tamper-proof certification** → double-claiming & fraud | EU Hydrogen Strategy |
-
 ### Solution Summary
 **GreenEarthX** is a **full-stack certification dApp** that lets plant operators:
 
