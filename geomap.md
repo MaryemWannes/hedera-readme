@@ -1,7 +1,7 @@
 # GEX Ecosystem Map
 
 ## Overview
-Interactive map system for hydrogen projects with multi-layer filtering and edit tracking.
+GEX Ecosystem Map is an interactive Map for visualizing, tracking, and analyzing hydrogen infrastructure projects (production, storage, CCUS, ports, pipelines) across Africa and beyond. It empowers users to explore project data, filter by multiple criteria, and contribute updates with built-in transparency and edit limits.
 
 ### Core Features
 - Interactive Leaflet map with clustering
