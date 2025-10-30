@@ -5,8 +5,8 @@ Built on **Hedera** (HTS + HCS) with **IPFS**, **AI OCR**, **Python micro-servic
 ## Overview
 
 **Project Title:** GreenEarthX Plausibility Check  
-**Hackathon Track:** [Select one: Onchain Finance & RWA | Sustainability & Climate Impact | Healthcare & Identity | Supply Chain & Logistics]  
-**Team Name:** [Team Name]  
+**Hackathon Track:** Track 2: DLT of Operations 
+**Team Name:** GreenEarthX  
 **Submission Date:** October 2025
 
 ### Solution Summary
