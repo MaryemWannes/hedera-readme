@@ -1,4 +1,4 @@
-# GEX Map V2
+# GEX Ecosystem Map
 
 ## Overview
 Interactive map system for hydrogen projects with multi-layer filtering and edit tracking.
@@ -25,3 +25,7 @@ npm run dev
 ```
 
 ### Project Structure
+
+---
+
+*Prepared for Hedera Africa Hackathon 2025*
