@@ -214,7 +214,7 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
    node createGexTraceTopic.js 
    ```
    This will create the 4 NFT collections and HCS topic, outputting their IDs to update in `.env`. 
-   > no need to run them because we already have the needed NFT collection and Topic 
+   > no need to run them because we already have the needed NFT collections and Topic 
    
 
 ### Running the Project Locally
@@ -233,7 +233,7 @@ OCR and Plausibility check services : pull docker images
 docker pull medbnk/plausibility_ocrs:latest
 docker pull medbnk/plausibilityalgorithm:latest
 ```
-The backend will start on `http://localhost:8000` and `http://localhost:8001"
+The backend will start on `http://localhost:8000` and `http://localhost:8001`
 
 **Expected Running State:**
 - Frontend accessible at `http://localhost:3002` with upload and NFT creation interfaces
@@ -310,31 +310,6 @@ Test account credentials and IPFS keys for judges will be provided **separately 
 
 ---
 
-## Code Quality Standards
-
-This project adheres to the following best practices:
-
-- **Code Style:** Consistent formatting using Prettier and ESLint
-- **Documentation:** Inline comments explaining file upload, IPFS hashing, and Hedera transactions
-- **Commit History:** Clear, descriptive commit messages
-- **Function Naming:** Descriptive, self-documenting function names
-- **Testing:** [Describe any unit tests or test coverage]
-
-### Running Linters
-
-```bash
-# Format code with Prettier
-npm run format
-
-# Check for linting errors
-npm run lint
-
-# Fix linting errors automatically
-npm run lint:fix
-```
-
----
-
 ## Project Files & Structure
 
 
@@ -354,7 +329,7 @@ npm run lint:fix
 
 ## Support & Contact
 
-**Team Contact:** [your-email@example.com]  
+**Team Contact:** [marwen123.c@gmail.com ]  
 **GitHub Issues:** [Link to your GitHub repo issues]  
 
 ---
