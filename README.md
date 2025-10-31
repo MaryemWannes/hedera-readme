@@ -1,10 +1,11 @@
- # GreenEarthX Plausibility Check 
-A **plausibility-verification + certification platform** for green-hydrogen / Power-to-X plants in Africa.  
+ # Building a Chain of Trust in the Green Power-to-X market
+ 
+A **plausibility-verification + certification platform** for green-hydrogen / Power-to-X plants in Africa and beyond.  
 Built on **Hedera** (HTS + HCS) with **IPFS**, **AI OCR**, **Python micro-services**, and a **global plant geomap**.
 
 ## Overview
 
-**Project Title:** GreenEarthX Plausibility Check  
+**Project Title:** Building a Chain of Trust in the Green Power-to-X market
 **Hackathon Track:** Track 2: DLT of Operations 
 **Team Name:** GreenEarthX  
 **Submission Date:** October 2025
@@ -154,8 +155,11 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
 - Node.js (v16 or higher)
 - npm or yarn
 - Git
-- Hedera Testnet Account (with tℏ testnet tokens)
+- Hedera Testnet Account (with ℏ testnet tokens)
 - IPFS access (Pinata API key or local IPFS node)
+- Hedera SDK
+- docker for pulling python services
+
 
 ### Installation
 
@@ -199,32 +203,41 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
 
 4. **Deploy NFT Collections & Create HCS Topic**
    ```bash
-   npm run deploy:collections
+   cd Hedera-collection-and-topics
+   node createGexInvoices.js
+   node createGexPowerPurchase.js
+   node createGexSustainability.js
+   node createGexTermsheet.js
+   node createGexTraceTopic.js 
    ```
-   This will create the 4 NFT collections and HCS topic, outputting their IDs to update in `.env`
+   This will create the 4 NFT collections and HCS topic, outputting their IDs to update in `.env`. 
+   > no need to run them because we already have the needed NFT collection and Topic 
+   
 
 ### Running the Project Locally
 
 **Frontend:**
+we have different Two Frontends GeoMap AND Certification.webapp and the Onboarding Service so we need to run each one seperatly
 ```bash
-npm start
+npm run dev
 ```
-The Nextjs frontend will launch on `http://localhost:3000`
+The Nextjs frontend will launch on `http://localhost:3000` for OnboardingApp, on `http://localhost:3001` for the GeoMap and `http://localhost:3002` for Certification.webapp !
 
 **Backend:**
-```bash
-ocr and plausibility chechk services : pull docker images
+OCR and Plausibility check services : pull docker images
 
+```bash
+docker pull medbnk/plausibility_ocrs:latest
+docker pull medbnk/plausibilityalgorithm:latest
 ```
-The backend will start on `http://localhost:8000`and  `http://localhost:8001"
+The backend will start on `http://localhost:8000` and `http://localhost:8001"
 
 **Expected Running State:**
-- Frontend accessible at `http://localhost:3000` with upload and NFT creation interfaces
-- Backend API running at `http://localhost:5000` handling IPFS uploads and Hedera transactions
+- Frontend accessible at `http://localhost:3002` with upload and NFT creation interfaces
+- Backend API running at `http://localhost:8000` handling data extraction from pdf documents that gonna be uploaded to IPFS and minted to Hedera NFT Collection using HTS and tracked using HCS service.
 - 4 NFT collections active on Hedera Testnet
 - HCS topic listening for issuance event messages
-- Mirror Node queries retrieving live transaction history
-
+- Mirror Node queries retrieving live transaction history viewed in the GeoMap `http://localhost:3001`
 ---
 
 ## Key Features & Workflows
