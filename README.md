@@ -42,12 +42,14 @@ All verification is **on-chain, cost-effective, and instantly shareable**.
 | certification_terraform     | Terraform IaC for backend infra (optional)                | —                        | [certification_terraform/README.md](certification_terraform/README.md) |
 | geomap-infrastructure       | Cloud infra for Geomap (optional)                         | —                        | [geomap-infrastructure/README.md](geomap-infrastructure/README.md) |
 
-## Tip for Judges:
-> **Start with the folder-specific README** – each contains:
-> - npm run dev / docker compose up commands
-> - Environment variables required
-> - API endpoints
-> - How to test the component in isolation
+## ⚠️ **Important Tip for Judges:**
+We have deployed both applications on the cloud for you to test. The codebase used is exactly the same as the one presented in this repository.
+Since 10 minutes is not sufficient for full credentials configuration, we are providing you with the following resources:
+- Certification URL: [http://gexcertification.ddnsking.com:3000/](Certification WebApp)
+- Test Account: **Email:** `hedera@test.gmail`, **Password:** `Hedera2025*`
+- Geomap URL:  [https://geomap.greenearthx.io/](GeoMap) (you can create your own account)
+  
+> A Testing Guide is Provided for Each Folder in the repository.
 
 ## Hedera Integration Summary
 
