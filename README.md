@@ -28,8 +28,8 @@ All verification is **on-chain, cost-effective, and instantly shareable**.
 
 ## Project Structure – Multi-Repo Layout
 
-> - This is a monorepo grouping all hackathon components into a single GitHub project.
-> - Each folder is a self-contained module with its own README.md, scripts, and deployment instructions.
+> This is a monorepo grouping all hackathon components into a single GitHub project.
+> Each folder is a self-contained module with its own README.md, scripts, and deployment instructions.
 
 ## Hedera Integration Summary
 
