@@ -274,13 +274,20 @@ sudo docker run -d -p 8001:8001 --platform=linux/arm64 medbnk/plausibilityalgori
 > - OCR → `http://localhost:8000`
 > - Plausibility → `http://localhost:8001`
 
-**Expected Running State:**
-- Frontend accessible at `http://localhost:3002` with upload and NFT creation interfaces
-- Backend API running at `http://localhost:8000` handling data extraction from pdf documents that gonna be uploaded to IPFS and minted to Hedera NFT Collection using HTS and tracked using HCS service.
-- 4 NFT collections active on Hedera Testnet
-- HCS topic listening for issuance event messages
-- Mirror Node queries retrieving live transaction history viewed in the GeoMap `http://localhost:3001`
----
+
+## Expected Running State
+
+| Folder                      | Expected Running State |
+|-----------------------------|------------------------|
+| certification.webapp        | ✅ Running on port **3002** |
+| Geomap.webapp               | ✅ Running on port **3001** |
+| Onboarding.app              | ✅ Running on port **3000** |
+| OcrPlausibilityCheck        | ✅ Running on port **8000** |
+| PlausibilityCheck           | ✅ Running on port **8001** |
+| Hedera-collection-and-topics| ⚙️ Used for setup scripts only |
+| certification_terraform     | ⚙️ Optional (not required for local run) |
+| geomap-infrastructure       | ⚙️ Optional (not required for local run) |
+
 
 ## Key Features & Workflows
 
