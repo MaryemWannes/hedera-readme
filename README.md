@@ -42,6 +42,12 @@ All verification is **on-chain, cost-effective, and instantly shareable**.
 | certification_terraform     | Terraform IaC for backend infra (optional)                | —                        | [certification_terraform/README.md](certification_terraform/README.md) |
 | geomap-infrastructure       | Cloud infra for Geomap (optional)                         | —                        | [geomap-infrastructure/README.md](geomap-infrastructure/README.md) |
 
+## Tip for Judges:
+> **Start with the folder-specific README** – each contains:
+> - npm run dev / docker compose up commands
+> - Environment variables required
+> - API endpoints
+> - How to test the component in isolation
 
 ## Hedera Integration Summary
 
@@ -236,21 +242,37 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
 
 ### Running the Project Locally
 
-**Frontend:**
-we have different Two Frontends GeoMap AND Certification.webapp and the Onboarding Service so we need to run each one seperatly
+**Frontend Apps (run each separately):**
 ```bash
-npm run dev
-```
-The Nextjs frontend will launch on `http://localhost:3000` for OnboardingApp, on `http://localhost:3001` for the GeoMap and `http://localhost:3002` for Certification.webapp !
+# Onboarding
+cd Onboarding.app
+npm run dev   # → http://localhost:3000
 
-**Backend:**
+# Geomap
+cd ../Geomap.webapp
+npm run dev   # → http://localhost:3001
+
+# Certification dApp
+cd ../certification.webapp
+npm run dev   # → http://localhost:3002
+```
+**Backend (OCR + Plausibility):**
 OCR and Plausibility check services : pull docker images
 
 ```bash
 docker pull medbnk/plausibility_ocrs:latest
 docker pull medbnk/plausibilityalgorithm:latest
+
+# For Mac
+docker run -p 8000:8000 medbnk/plausibility_ocrs:latest
+docker run -p 8001:8001 medbnk/plausibilityalgorithm:latest
+
+# For Ubuntu 
+sudo docker run -d -p 8000:8000 --platform=linux/arm64 medbnk/plausibility_ocrs:latest
+sudo docker run -d -p 8001:8001 --platform=linux/arm64 medbnk/plausibilityalgorithm:latest
 ```
-The backend will start on `http://localhost:8000` and `http://localhost:8001`
+> - OCR → `http://localhost:8000`
+> - Plausibility → `http://localhost:8001`
 
 **Expected Running State:**
 - Frontend accessible at `http://localhost:3002` with upload and NFT creation interfaces
