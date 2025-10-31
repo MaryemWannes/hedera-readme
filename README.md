@@ -5,10 +5,10 @@ Built on **Hedera** (HTS + HCS) with **IPFS**, **AI OCR**, **Python micro-servic
 
 ## Overview
 
-**Project Title:** Building a Chain of Trust in the Green Power-to-X market
-**Hackathon Track:** Track 2: DLT of Operations 
-**Team Name:** GreenEarthX  
-**Submission Date:** October 2025
+- **Project Title:** Building a Chain of Trust in the Green Power-to-X market
+- **Hackathon Track:** Track 2: DLT of Operations 
+- **Team Name:** GreenEarthX  
+- **Submission Date:** October 2025
 
 ### Solution Summary
 **GreenEarthX** is a **full-stack certification dApp** that lets plant operators:
