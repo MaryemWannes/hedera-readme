@@ -23,6 +23,9 @@ All verification is **on-chain, cost-effective, and instantly shareable**.
 
 ---
 
+## Architecture Diagram
+<img width="1994" height="1194" alt="image" src="https://github.com/user-attachments/assets/fa4b5210-9be0-4491-bcd3-b449d299edc8" />
+
 ## Hedera Integration Summary
 
 ### Services Used
@@ -129,7 +132,7 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
 
 ---
 
-## Architecture Diagram
+
 
 
 ## Deployed Hedera Testnet IDs
