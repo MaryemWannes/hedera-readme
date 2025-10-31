@@ -26,6 +26,11 @@ All verification is **on-chain, cost-effective, and instantly shareable**.
 ## Architecture Diagram
 <img width="1994" height="1194" alt="image" src="https://github.com/user-attachments/assets/fa4b5210-9be0-4491-bcd3-b449d299edc8" />
 
+## Project Structure – Multi-Repo Layout
+
+> - This is a monorepo grouping all hackathon components into a single GitHub project.
+> - Each folder is a self-contained module with its own README.md, scripts, and deployment instructions.
+
 ## Hedera Integration Summary
 
 ### Services Used
@@ -214,7 +219,7 @@ Mirror Node queries are free and publicly accessible, enabling cost-free verific
    node createGexTraceTopic.js 
    ```
    This will create the 4 NFT collections and HCS topic, outputting their IDs to update in `.env`. 
-   > no need to run them because we already have the needed NFT collections and Topic 
+   > Note: Already done for the hackathon – IDs are shared here.
    
 
 ### Running the Project Locally
